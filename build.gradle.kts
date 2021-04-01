@@ -20,6 +20,7 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint") version "10.0.0"
 }
 
+
 group = properties("pluginGroup")
 version = properties("pluginVersion")
 
@@ -30,6 +31,8 @@ repositories {
 }
 dependencies {
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.16.0")
+    compileOnly(files("lib/wizard-template.jar"))
+
 }
 
 // Configure gradle-intellij-plugin plugin.
